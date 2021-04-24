@@ -1,0 +1,59 @@
+\documentclass[11pt,a4paper,oneside]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+%
+\usepackage[intlimits]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage[amsmath, thmmarks]{ntheorem}
+\usepackage{mathrsfs}
+\usepackage{ esint }
+\usepackage{textcomp}
+%
+\usepackage{typearea}
+% \usepackage{scrpage2}    % package is obsolete
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ohead{\today}
+\cfoot{\pagemark}
+
+\usepackage{array}
+\usepackage{enumerate}
+\usepackage{titlesec} 
+
+
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{epic}
+\usepackage{comment}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, filecolor=black, urlcolor=black, bookmarksopenlevel=section]{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{capt-of}
+
+\usepackage{geometry}
+\geometry{
+	left=2.5cm,
+	right=2.cm,
+	top=2cm,
+	bottom=2.5cm,
+}
+
+\usepackage{chngcntr}
+\counterwithin*{equation}{section}
+\numberwithin{equation}{section}
+\titleformat{\section}[block]{\fontfamily{cmss}\normalcolor\bfseries} {Aufgabe \thesection}{.3em}{}
+
+\setlength{\parindent}{0pt}
+
+% Tabellen
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\newcolumntype{x}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}

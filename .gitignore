@@ -1,0 +1,10 @@
+*.DS_Store
+*.pyc
+*.log
+*.fls
+*.fdb_latexmk
+*.aux
+*.gz
+*.out
+*.thm
+auto
