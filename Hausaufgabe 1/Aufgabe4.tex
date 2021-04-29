@@ -1,0 +1,16 @@
+\subsection{Wie lauten die Passwörter der Benutzer? Welcher Modus ist am besten geeignet, um das jeweilige Passwort zu knacken? Beschreiben Sie, woran das liegt.}
+
+\begin{itemize} 
+	\item \textbf{felix}: fElIx (single)
+	\item \textbf{christian}: abygurl69	(wordlist)
+	\item \textbf{lena}: abc (incremental)
+	\item \textbf{ben}: 1235 (incremental:Digits)
+\end{itemize}
+
+Der \textbf{single} Modus verwendet den User Login Namen und testet mithilfe von einschränkenden Regeln, um das Passwort möglichst schnell zu knacken. Für Felix ist dieser Modus am Besten, da das Passwort aus denselben Buchstaben wie der Benutzername besteht. Lediglich die Groß/Kleinschreibung ist verändert.\\
+Der \textbf{wordlist} Modus verwendet eine Wordlist, in welcher das Passwort von Christian enthalten ist. Christians Passwort ist somit kompromitiert und sehr schnell zu knacken\\
+Der \textbf{incremental} Modus läuft per default mit ASCII Zeichen. Somit ist er besonders gut geeignet, um ohne Vorwissen Passwörter zu knacken. Bei Lena funktioniert dies gut, da ihr Passwort sehr kurz und einfach ist. Für kompliziertere Passwörter und mit etwas Vorwissen/Glück kann man noch genauere Regeln definieren:  z.B. john --incremental=alpha --mask='?u?w' --min-length=7 --max-length=9 pw\\
+Der \textbf{incremental:Digits} Modus funktioniert bei Ben, da sein Passwort nur aus Zahlen besteht und somit perfekt geeignet zum Knacken ist.\\
+\\
+\subsection{Was können Sie aus Ihren Beobachtungen in Bezug auf die Eigenschaften eines guten Passwortes schließen?}
+Ein gutes Passwort verwendet nicht den Login-Namen oder sonstige öffentliche persönliche Informationen, da diese stark die Sicherheit des Passworts kompromittieren. Zudem sollten sie außergewöhnlich genug seien, sodass sie sich nicht auf Wordlisten enthalten sind (d.h. nicht Passwort, admin, abygurl69, etc.). Man sollte dem Angreifer kein Vorwissen über dass Passwort geben (mindestlänge, verschiedene Zeichenarten, etc.), um somit keine einschränkenden Regeln zum Knacken zu erlauben. Ebenfalls sollte man unbedingt möglichst verschiedene Zeichenarten und lange Passwörter verwenden, um nicht Opfer dieser einschränkenden Regeln zum Knacken zu werden. Sowas könnte z.B. bei Angriffen auf mehrere Personen passieren, wo der incremental:Lower Modus verwendet wird, wobei möglichst schnell viele schwächere Passwörter geknackt werden können.\\
